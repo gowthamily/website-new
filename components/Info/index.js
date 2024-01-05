@@ -4,7 +4,7 @@ const Info = () => (
   <div className="profile-container">
     <div class="container">
       <h3>UI/UX Designer</h3>
-      <h1>Hello, my name is Gowtham</h1>
+      <h1>Hello, my name is gowtham</h1>
       <p>Developer in india</p>
       <button className="btn">Project</button>
       <button className="btn-2">LinkedIn</button>
