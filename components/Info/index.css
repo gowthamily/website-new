@@ -1,0 +1,20 @@
+.btn {
+  background-color: yellow;
+  border-radius: 10px;
+  color: black;
+}
+.btn-2 {
+  border-radius: 10px;
+  color: black;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section {
+  background-color: yellow;
+  background-size: cover;
+  width: 100%;
+}

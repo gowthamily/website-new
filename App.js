@@ -1,19 +1,27 @@
-function switchOff() {
-    document.getElementById("bulbImage").src =
-        "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
-    document.getElementById("catImage").src =
-        "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png";
-    document.getElementById("switchStatus").textContent = "Switched Off";
-    document.getElementById("onSwitch").style.backgroundColor = "#22c55e";
-    document.getElementById("offSwitch").style.backgroundColor = "#cbd2d9";
-}
+import { Route, Switch } from "react-router-dom";
 
-function switchOn() {
-    document.getElementById("bulbImage").src =
-        "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
-    document.getElementById("catImage").src =
-        "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/cat-img.png";
-    document.getElementById("switchStatus").textContent = "Switched On";
-    document.getElementById("offSwitch").style.backgroundColor = "#e12d39";
-    document.getElementById("onSwitch").style.backgroundColor = "#cbd2d9";
-}
+import Header from "./components/Header";
+import About from "./components/About";
+import Info from "./components/Info";
+import Project from "./components/Project";
+import Contacts from "./components/Contacts";
+
+import "./App.css";
+
+const App = () => (
+  <div className="app-container">
+    <div className="responsive-container">
+      <Header />
+      <div className="app-body">
+        <Info />
+        <Switch>
+          <Route exact path="/about" component={About} />
+          <Route exact path="/project" component={Project} />
+          <Route exact path="/contacts" component={Contacts} />
+        </Switch>
+      </div>
+    </div>
+  </div>
+);
+
+export default App;
